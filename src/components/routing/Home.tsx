@@ -1,10 +1,8 @@
 import React, { FC, useEffect, useState } from 'react';
-import AddStudentsForm from '../students/AddStudents';
 import { Rector, Student, Teacher } from '../models';
 import '../../index.css';
 
 import DisplayStudents from '../students/DisplayStudents';
-import AddTeachersForm from '../teachers/AddTeacher';
 import DisplayTeachers from '../teachers/DisplayTeachers';
 import AddRectorsForm from '../rectors/AddRectors';
 import DisplayRectors from '../rectors/DisplayRectors';
@@ -52,11 +50,6 @@ const Home: FC = () => {
     }, [rectorsList]);
 
     //!!!!! ADD, DELETE, UPDATE STUDENTS
-
-    const addStudent = (newStudent: Student) => {
-        setStudentsList([...studentsList, newStudent]);
-    };
-
     const updateStudent = (newStudent: Student) => {
         setStudentsList(
             studentsList.map((student) =>
@@ -72,11 +65,7 @@ const Home: FC = () => {
         setStudentsList(newStudentsList);
     };
 
-    //!!!!! ADD, DELETE, UPDATE TEACHERS
-
-    const addTeacher = (newTeacher: Teacher) => {
-        setTeachersList([...teachersList, newTeacher]);
-    };
+    //!!!!!  DELETE, UPDATE TEACHERS
 
     const updateTeacher = (newTeacher: Teacher) => {
         setTeachersList(
@@ -117,16 +106,9 @@ const Home: FC = () => {
 
     return (
         <div className='Home'>
-            <div className='title'>
-                <span>Univesite : Black Bern</span>
-            </div>
+            <h1 className='title'>Universite</h1>
             <div className='student'>
                 <h2 className='student_title'>Список студентов</h2>
-                <AddStudentsForm
-                    addStudent={addStudent}
-                    teacherList={teachersList}
-                />
-
                 <DisplayStudents
                     teacherList={teachersList}
                     studentsList={studentsList}
@@ -137,7 +119,7 @@ const Home: FC = () => {
             <div className='employee'>
                 <h2 className='student_title'>Список работников</h2>
                 <div className='teachers'>
-                    <AddTeachersForm addTeacher={addTeacher} />
+                    {/* <AddTeachersForm addTeacher={addTeacher} /> */}
                     <DisplayTeachers
                         teachersList={teachersList}
                         deleteTeacher={deleteTeacher}
