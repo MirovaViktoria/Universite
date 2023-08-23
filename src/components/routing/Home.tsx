@@ -1,5 +1,4 @@
 import React, { FC, useEffect, useState } from 'react';
-import AddStudentsForm from '../students/AddStudents';
 import { Rector, Student, Teacher } from '../models';
 import '../../index.css';
 
@@ -52,11 +51,6 @@ const Home: FC = () => {
     }, [rectorsList]);
 
     //!!!!! ADD, DELETE, UPDATE STUDENTS
-
-    const addStudent = (newStudent: Student) => {
-        setStudentsList([...studentsList, newStudent]);
-    };
-
     const updateStudent = (newStudent: Student) => {
         setStudentsList(
             studentsList.map((student) =>
@@ -117,16 +111,8 @@ const Home: FC = () => {
 
     return (
         <div className='Home'>
-            <div className='title'>
-                <span>Univesite : Black Bern</span>
-            </div>
             <div className='student'>
                 <h2 className='student_title'>Список студентов</h2>
-                <AddStudentsForm
-                    addStudent={addStudent}
-                    teacherList={teachersList}
-                />
-
                 <DisplayStudents
                     teacherList={teachersList}
                     studentsList={studentsList}
