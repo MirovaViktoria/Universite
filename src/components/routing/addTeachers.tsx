@@ -29,8 +29,7 @@ const AddTeacher: FC = () => {
     return (
         <div className='Home'>
             <div className='employee'>
-                <h2 className='student_title'>Список работников</h2>
-                <div className='teachers'>
+                <div className='add-form'>
                     <AddTeachersForm addTeacher={addTeacher} />
                 </div>
             </div>

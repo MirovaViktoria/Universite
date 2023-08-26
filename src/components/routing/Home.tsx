@@ -106,7 +106,6 @@ const Home: FC = () => {
 
     return (
         <div className='Home'>
-            <h1 className='title'>Universite</h1>
             <div className='student'>
                 <h2 className='student_title'>Список студентов</h2>
                 <DisplayStudents

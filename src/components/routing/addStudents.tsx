@@ -40,8 +40,7 @@ const AddStudents: FC = () => {
 
     return (
         <div className='Home'>
-            <div className='student'>
-                <h2 className='student_title'>Список студентов</h2>
+            <div className='add-form'>
                 <AddStudentsForm
                     addStudent={addStudent}
                     teacherList={teachersList}
