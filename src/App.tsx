@@ -16,9 +16,6 @@ const App: FC = () => {
                 </li>
                 <ul className='navbar-menu'>
                     <li>
-                        <Link to=''>Главная</Link>
-                    </li>
-                    <li>
                         <Link to='/addStudent'>Зачислить</Link>
                     </li>
                     <li>
