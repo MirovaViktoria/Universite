@@ -118,7 +118,6 @@ const Home: FC = () => {
             <div className='employee'>
                 <h2 className='student_title'>Список работников</h2>
                 <div className='teachers'>
-                    {/* <AddTeachersForm addTeacher={addTeacher} /> */}
                     <DisplayTeachers
                         teachersList={teachersList}
                         deleteTeacher={deleteTeacher}

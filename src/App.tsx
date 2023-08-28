@@ -6,6 +6,7 @@ import Home from './components/routing/Home';
 import { Link } from 'react-router-dom';
 import AddStudents from './components/routing/addStudents';
 import AddTeacher from './components/routing/addTeachers';
+import AddRectors from './components/routing/addRectors';
 
 const App: FC = () => {
     return (
@@ -21,6 +22,9 @@ const App: FC = () => {
                     <li>
                         <Link to='/addTeacher'>Нанять учителя</Link>
                     </li>
+                    <li>
+                        <Link to='/addRector'>Нанять ректора</Link>
+                    </li>
                 </ul>
             </header>
 
@@ -28,6 +32,7 @@ const App: FC = () => {
                 <Route path='/' element={<Home />} />
                 <Route path='/addStudent' element={<AddStudents />} />
                 <Route path='/addTeacher' element={<AddTeacher />} />
+                <Route path='/addRector' element={<AddRectors />} />
             </Routes>
         </div>
     );

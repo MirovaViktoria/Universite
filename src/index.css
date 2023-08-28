@@ -21,6 +21,8 @@ header {
 }
 .navbar-menu {
     display: flex;
+    justify-content: space-around;
+    width: 500px;
 }
 .navbar-menu li:hover {
     opacity: 0.5;
@@ -47,6 +49,7 @@ header {
     padding-left: 5px;
     border-radius: 5px;
     margin-left: 15px;
+    height: 30px;
 }
 .dollar {
     margin-left: 15px;
@@ -69,6 +72,7 @@ header {
 }
 .form_add {
     display: flex;
+    align-items: center;
 }
 .btn_hiring {
     background-color: springgreen;
