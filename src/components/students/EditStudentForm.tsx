@@ -94,7 +94,7 @@ const EditStudentForm: FC<EditStudentFormProps> = ({
                 value={editStudent.course}
             ></input>
             <input
-                className='input-submit'
+                className='input-edit'
                 name='teacher'
                 type='text'
                 placeholder='teacher'
