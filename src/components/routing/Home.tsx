@@ -4,7 +4,6 @@ import '../../index.css';
 
 import DisplayStudents from '../students/DisplayStudents';
 import DisplayTeachers from '../teachers/DisplayTeachers';
-import AddRectorsForm from '../rectors/AddRectors';
 import DisplayRectors from '../rectors/DisplayRectors';
 
 //!!!!!!!!!!!!!!!!!
@@ -82,10 +81,7 @@ const Home: FC = () => {
         setTeachersList(newTeachersList);
     };
 
-    //!!!!! ADD, DELETE, UPDATE RECTOR
-    const addRector = (newRector: Rector) => {
-        setRectorsList([...rectorsList, newRector]);
-    };
+    //!!!!! DELETE, UPDATE RECTOR
 
     const updateRector = (newRector: Rector) => {
         setRectorsList(
@@ -125,7 +121,6 @@ const Home: FC = () => {
                     />
                 </div>
                 <div className='rector'>
-                    <AddRectorsForm addRector={addRector} />
                     <DisplayRectors
                         rectorsList={rectorsList}
                         deleteRector={deleteRector}
