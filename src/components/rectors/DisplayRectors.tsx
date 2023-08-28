@@ -14,7 +14,7 @@ const DisplayRectors: FC<DisplayRectorsProps> = ({
     deleteRector,
 }) => {
     return (
-        <div className='container-students'>
+        <div className='container'>
             {rectorsList.map((rector) => {
                 return (
                     <OneRector

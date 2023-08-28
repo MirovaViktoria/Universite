@@ -111,23 +111,18 @@ const Home: FC = () => {
                     updateStudent={updateStudent}
                 />
             </div>
-            <div className='employee'>
-                <h2 className='student_title'>Список работников</h2>
-                <div className='teachers'>
-                    <DisplayTeachers
-                        teachersList={teachersList}
-                        deleteTeacher={deleteTeacher}
-                        updateTeacher={updateTeacher}
-                    />
-                </div>
-                <div className='rector'>
-                    <DisplayRectors
-                        rectorsList={rectorsList}
-                        deleteRector={deleteRector}
-                        updateRector={updateRector}
-                    />
-                </div>
-            </div>
+            <h2 className='student_title'>Список работников</h2>
+
+            <DisplayTeachers
+                teachersList={teachersList}
+                deleteTeacher={deleteTeacher}
+                updateTeacher={updateTeacher}
+            />
+            <DisplayRectors
+                rectorsList={rectorsList}
+                deleteRector={deleteRector}
+                updateRector={updateRector}
+            />
         </div>
     );
 };

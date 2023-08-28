@@ -82,10 +82,11 @@ header {
     padding-right: 5px;
     padding-left: 5px;
 }
-.container-students {
+.container {
     display: flex;
     flex-direction: column;
     font-size: 20px;
+    padding-left: 15px;
 }
 .select {
     width: 300px;

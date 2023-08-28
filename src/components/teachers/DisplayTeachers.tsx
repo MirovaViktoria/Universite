@@ -14,7 +14,7 @@ const DisplayTeachers: FC<DisplayTeachersProps> = ({
     deleteTeacher,
 }) => {
     return (
-        <div className='container-students'>
+        <div className='container'>
             {teachersList.map((teacher) => {
                 return (
                     <OneTeacher

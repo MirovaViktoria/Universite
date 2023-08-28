@@ -18,7 +18,7 @@ const DisplayStudents: FC<DisplayStudentsProps> = ({
     const [searchValue, setSearchValue] = useState('');
 
     return (
-        <div className='container-students'>
+        <div className='container'>
             <div className='search_form'>
                 <svg
                     className='search_icon'
