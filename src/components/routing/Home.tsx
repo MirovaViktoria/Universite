@@ -1,7 +1,17 @@
 import React, { FC, useEffect, useState } from 'react';
 import { Rector, Student, Teacher } from '../models';
 import '../../index.css';
-
+import CloseIcon from '@mui/icons-material/Close';
+import EditIcon from '@mui/icons-material/Edit';
+import {
+    Container,
+    IconButton,
+    Table,
+    TableBody,
+    TableCell,
+    TableHead,
+    TableRow,
+} from '@mui/material';
 import DisplayStudents from '../students/DisplayStudents';
 import DisplayTeachers from '../teachers/DisplayTeachers';
 import DisplayRectors from '../rectors/DisplayRectors';
@@ -49,6 +59,7 @@ const Home: FC = () => {
     }, [rectorsList]);
 
     //!!!!! ADD, DELETE, UPDATE STUDENTS
+
     const updateStudent = (newStudent: Student) => {
         setStudentsList(
             studentsList.map((student) =>
@@ -102,8 +113,98 @@ const Home: FC = () => {
 
     return (
         <div className='Home'>
+            <Container maxWidth='lg' sx={{ marginTop: '20px' }}>
+                <h2 className='student_title'>Таблица студентов</h2>
+                <Table sx={{ width: '100%' }}>
+                    <TableHead>
+                        <TableRow sx={{ background: 'black', height: '40px' }}>
+                            {/* <TableCell
+                                sx={{
+                                    color: 'white',
+                                    fontWeight: 600,
+                                    fontSize: '18px',
+                                }}
+                            >
+                                Id
+                            </TableCell> */}
+                            <TableCell
+                                sx={{
+                                    color: 'white',
+                                    fontWeight: 600,
+                                    fontSize: '18px',
+                                }}
+                            >
+                                FirstName
+                            </TableCell>
+                            <TableCell
+                                sx={{
+                                    color: 'white',
+                                    fontWeight: 600,
+                                    fontSize: '18px',
+                                }}
+                            >
+                                LastName
+                            </TableCell>
+                            <TableCell
+                                sx={{
+                                    color: 'white',
+                                    fontWeight: 600,
+                                    fontSize: '18px',
+                                }}
+                            >
+                                Age
+                            </TableCell>
+                            <TableCell
+                                sx={{
+                                    color: 'white',
+                                    fontWeight: 600,
+                                    fontSize: '18px',
+                                }}
+                            >
+                                Course
+                            </TableCell>
+                            <TableCell
+                                sx={{
+                                    color: 'white',
+                                    fontWeight: 600,
+                                    fontSize: '18px',
+                                }}
+                            >
+                                Edit
+                            </TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {studentsList.map((el) => (
+                            <TableRow sx={{ borderBottom: 'solid 2px black' }}>
+                                {/* <TableCell>{el.id}</TableCell> */}
+                                <TableCell>{el.firstName}</TableCell>
+                                <TableCell>{el.lastName}</TableCell>
+                                <TableCell>{el.age}</TableCell>
+                                <TableCell
+                                    sx={{
+                                        display: 'flex',
+                                        with: '100px',
+                                        justifyContent: 'space-around',
+                                        alignItems: 'center',
+                                    }}
+                                >
+                                    {el.course}
+                                    <IconButton
+                                        onClick={() => deleteStudent(el.id)}
+                                    >
+                                        {/* <CloseIcon color='error' onClick={()=> } /> */}
+                                    </IconButton>
+                                </TableCell>
+                                <TableCell>
+                                    <EditIcon />
+                                </TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </Container>
             <div className='student'>
-                <h2 className='student_title'>Список студентов</h2>
                 <DisplayStudents
                     teacherList={teachersList}
                     studentsList={studentsList}

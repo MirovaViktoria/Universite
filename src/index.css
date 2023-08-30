@@ -24,10 +24,10 @@ header {
     justify-content: space-around;
     width: 500px;
 }
-.navbar-menu li:hover {
+.navbar-btn:hover {
     opacity: 0.5;
 }
-.navbar-menu li:focus {
+.navbar-btn:focus {
     color: red;
 }
 

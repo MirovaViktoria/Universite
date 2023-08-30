@@ -17,13 +17,19 @@ const App: FC = () => {
                 </li>
                 <ul className='navbar-menu'>
                     <li>
-                        <Link to='/addStudent'>Зачислить</Link>
+                        <Link className='navbar-btn' to='/addStudent'>
+                            Зачислить
+                        </Link>
                     </li>
                     <li>
-                        <Link to='/addTeacher'>Нанять учителя</Link>
+                        <Link className='navbar-btn' to='/addTeacher'>
+                            Нанять учителя
+                        </Link>
                     </li>
                     <li>
-                        <Link to='/addRector'>Нанять ректора</Link>
+                        <Link className='navbar-btn' to='/addRector'>
+                            Нанять ректора
+                        </Link>
                     </li>
                 </ul>
             </header>
